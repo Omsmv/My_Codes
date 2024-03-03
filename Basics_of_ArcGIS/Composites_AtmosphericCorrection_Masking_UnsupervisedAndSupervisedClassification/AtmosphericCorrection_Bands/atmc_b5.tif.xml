@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20210328</CreaDate><CreaTime>00384800</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\RasterCalculator" Date="20210328" Time="003848">RasterCalculator (("Mask_B5.tif"*0.00002)-0.1)/Cos((90-56.43792281)*3.1416/180) D:\Om\IISER\RS_and_GIS_Assignment_3\AtmosphericCorrection_Bands\atmc_b5.tif</Process></lineage></DataProperties></Esri></metadata>

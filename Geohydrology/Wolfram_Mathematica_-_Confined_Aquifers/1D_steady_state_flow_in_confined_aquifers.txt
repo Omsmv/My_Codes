@@ -1,0 +1,29 @@
+In[27]:= "Name: Om Vaknalli
+Roll No. 18376
+Date: 22nd November 2020
+
+Assignment: Write a program in MATLAB or python to solve the 1-D steady-state flow in a confined aquifer using Laplace equation with boundary conditions.";
+
+"Laplace equation: ∇^2[h(x, y, z)] = 0 
+
+In 1-Dimension, it reduces to: d^2[h(x)]/dx^2 = 0
+
+Boundary Conditions:
+
+1.) At x = 0, h(x) = h1 ----- h(0) = h1
+2.) At x = L, h(x) = h2 ----- h(L) = h2
+
+Solving the differential equation with boundary conditions:"
+In[30]:= DSolve[{h''[x]==0,h[0]==h1,h[L]==h2},h[x],x]
+Out[30]= {{h[x]->(h1 L-h1 x+h2 x)/L}}
+In[33]:= "Hence, the simplified solution is : h(x) = h1 + ((h2 - h1) * x)/L.
+
+Now, according to Darcy's law:";
+In[75]:=  q =-k * h'[x];
+
+"But:";
+
+h'[x]=(h2 - h1)/L;
+
+"Hence, q =";q
+Out[78]= -(((-h1+h2) k)/L)

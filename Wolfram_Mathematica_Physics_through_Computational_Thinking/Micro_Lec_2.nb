@@ -1,0 +1,78 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{RowBox[{"Manipulate","[","\n",RowBox[
+{RowBox[{RowBox[{"matA","=",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"a",",","b"}],"}"}],",",RowBox[
+{"{",RowBox[{"c",",","d"}],"}"}]}],"}"}]}],";","\n",RowBox[{"system","=",RowBox[{"Round","[",RowBox[
+{RowBox[{"Eigensystem","[","matA","]"}],",","0.01"}],"]"}]}],";","\n",RowBox[{"values","=",RowBox[
+{"system","[",RowBox[{"[","1","]"}],"]"}]}],";","\n",RowBox[{"vec1","=",RowBox[{"system","[",RowBox[
+{"[",RowBox[{"2",",","1"}],"]"}],"]"}]}],";","\n",RowBox[{"vec2","=",RowBox[{"system","[",RowBox[
+{"[",RowBox[{"2",",","2"}],"]"}],"]"}]}],";","\n",RowBox[{"strPlot","=",RowBox[{"StreamPlot","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{RowBox[{"a"," ","x"}],"+",RowBox[{"b"," ","y"}]}],",",RowBox[
+{RowBox[{"c"," ","x"}],"+",RowBox[{"d"," ","y"}]}]}],"}"}],",",RowBox[{"{",RowBox[
+{"x",",",RowBox[{"-","4"}],",","4"}],"}"}],",",RowBox[{"{",RowBox[{"y",",",RowBox[
+{"-","4"}],",","4"}],"}"}]}],"]"}]}],";","\n",RowBox[{"linePlot","=",RowBox[{"Plot","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{RowBox[{"vec1","[",RowBox[{"[","2","]"}],"]"}]," ",RowBox[
+{"x","/",RowBox[{"{",RowBox[{RowBox[{"vec1","[",RowBox[{"[","1","]"}],"]"}],"+",RowBox[
+{"10","^",RowBox[{"(",RowBox[{"-","10"}],")"}]}]}],"}"}]}]}],",",RowBox[{RowBox[{"vec2","[",RowBox[
+{"[","2","]"}],"]"}]," ",RowBox[{"x","/",RowBox[{"{",RowBox[{RowBox[{"vec2","[",RowBox[
+{"[","1","]"}],"]"}],"+",RowBox[{"10","^",RowBox[{"(",RowBox[{"-","10"}],")"}]}]}],"}"}]}]}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",",RowBox[{"-","5"}],",","5"}],"}"}],",",RowBox[{"PlotRange","\[Rule]",RowBox[
+{"{",RowBox[{RowBox[{"-","5"}],",","5"}],"}"}]}],",",RowBox[{"PlotStyle","\[Rule]",RowBox[
+{"Directive","[",RowBox[{"Red",",",RowBox[{"Opacity","[","0.8","]"}]}],"]"}]}],",",RowBox[
+{"PlotLabel","\[Rule]","system"}]}],"]"}]}],";","\n",RowBox[{"Show","[",RowBox[{"strPlot",",","linePlot",",",RowBox[
+{"PlotLabel","\[Rule]","system"}]}],"]"}]}],",","\n",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"a",",","0"}],"}"}],",",RowBox[{"-","3"}],",","3"}],"}"}],",",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"b",",",RowBox[{"-","2"}]}],"}"}],",",RowBox[{"-","3"}],",","3"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"c",",","1"}],"}"}],",",RowBox[{"-","3"}],",","3"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"d",",","0"}],"}"}],",",RowBox[{"-","3"}],",","3"}],"}"}]}],"]"}]," "}]],
+"Input",ExpressionUUID -> "7f027393-ccaa-4080-bdc7-2b896f13d465",CellLabel -> "In[1]:= "],Cell[
+BoxData[
+TagBox[StyleBox[DynamicModuleBox[{Set[a$$,-3],Set[b$$,0.69`],Set[c$$,0],Set[d$$,2],Set[
+Typeset`show$$,True],Set[Typeset`bookmarkList$$,{}],Set[Typeset`bookmarkMode$$,"Menu"],Typeset`animator$$,Set[
+Typeset`animvar$$,1],Set[Typeset`name$$,"\"untitled\""],Set[Typeset`specs$$,{{{Hold[
+a$$],0},-3,3},{{Hold[b$$],-2},-3,3},{{Hold[c$$],1},-3,3},{{Hold[d$$],0},-3,3}}],Set[
+Typeset`size$$,Automatic],Set[Typeset`update$$,0],Set[Typeset`initDone$$,False],Set[
+Typeset`skipInitDone$$,True]},DynamicBox[Manipulate`ManipulateBoxes[1,StandardForm,
+RuleDelayed["Variables",{Set[a$$,0],Set[b$$,-2],Set[c$$,1],Set[d$$,0]}],RuleDelayed[
+"ControllerVariables",{}],RuleDelayed["OtherVariables",{Typeset`show$$,Typeset`bookmarkList$$,Typeset`bookmarkMode$$,Typeset`animator$$,Typeset`animvar$$,Typeset`name$$,Typeset`specs$$,Typeset`size$$,Typeset`update$$,Typeset`initDone$$,Typeset`skipInitDone$$}],
+RuleDelayed["Body",CompoundExpression[Set[matA,{{a$$,b$$},{c$$,d$$}}],Set[system,
+Round[Eigensystem[matA],0.01]],Set[values,Part[system,1]],Set[vec1,Part[system,2,
+1]],Set[vec2,Part[system,2,2]],Set[strPlot,StreamPlot[{Plus[Times[a$$,x],Times[b$$,
+y]],Plus[Times[c$$,x],Times[d$$,y]]},{x,-4,4},{y,-4,4}]],Set[linePlot,Plot[{Times[
+Part[vec1,2],Times[x,Power[{Plus[Part[vec1,1],Power[10,-10]]},-1]]],Times[Part[vec2,
+2],Times[x,Power[{Plus[Part[vec2,1],Power[10,-10]]},-1]]]},{x,-5,5},PlotRange -> {-5,5},
+PlotStyle -> Directive[Red,Opacity[0.8]],PlotLabel -> system]],Show[strPlot,linePlot,
+PlotLabel -> system]]],RuleDelayed["Specifications",{{{a$$,0},-3,3},{{b$$,-2},-3,3},{{c$$,1},-3,3},{{d$$,0},-3,3}}],
+RuleDelayed["Options",{}],RuleDelayed["DefaultOptions",{}]],SingleEvaluation -> True],
+RuleDelayed[DynamicModuleValues,{}],RuleDelayed[Deinitialization,None],RuleDelayed[
+UntrackedVariables,{Typeset`size$$}],SynchronousInitialization -> True,RuleDelayed[
+UnsavedVariables,{Typeset`initDone$$}],RuleDelayed[UndoTrackedVariables,{Typeset`show$$,Typeset`bookmarkMode$$}],
+ExpressionUUID -> "2304504c-72a2-41cf-aad0-f1dfab568378"],"Manipulate",Deployed -> True,
+StripOnInput -> False],Manipulate`InterpretManipulate[1]],StandardForm],"Output",
+ExpressionUUID -> "58c76eec-213c-4310-872b-bbce5c0194c9",CellLabel -> "Out[2]= "],Cell[
+BoxData[
+TagBox[StyleBox[DynamicModuleBox[{Set[a$$,2],Set[b$$,2],Set[c$$,-3],Set[d$$,-2],Set[
+Typeset`show$$,True],Set[Typeset`bookmarkList$$,{}],Set[Typeset`bookmarkMode$$,"Menu"],Typeset`animator$$,Set[
+Typeset`animvar$$,1],Set[Typeset`name$$,"\"untitled\""],Set[Typeset`specs$$,{{{Hold[
+a$$],0},-3,3},{{Hold[b$$],-2},-3,3},{{Hold[c$$],1},-3,3},{{Hold[d$$],0},-3,3}}],Set[
+Typeset`size$$,Automatic],Set[Typeset`update$$,0],Set[Typeset`initDone$$,False],Set[
+Typeset`skipInitDone$$,True]},DynamicBox[Manipulate`ManipulateBoxes[1,StandardForm,
+RuleDelayed["Variables",{Set[a$$,0],Set[b$$,-2],Set[c$$,1],Set[d$$,0]}],RuleDelayed[
+"ControllerVariables",{}],RuleDelayed["OtherVariables",{Typeset`show$$,Typeset`bookmarkList$$,Typeset`bookmarkMode$$,Typeset`animator$$,Typeset`animvar$$,Typeset`name$$,Typeset`specs$$,Typeset`size$$,Typeset`update$$,Typeset`initDone$$,Typeset`skipInitDone$$}],
+RuleDelayed["Body",CompoundExpression[Set[matA,{{a$$,b$$},{c$$,d$$}}],Set[system,
+Round[Eigensystem[matA],0.01]],Set[values,Part[system,1]],Set[vec1,Part[system,2,
+1]],Set[vec2,Part[system,2,2]],Set[strPlot,StreamPlot[{Plus[Times[a$$,x],Times[b$$,
+y]],Plus[Times[c$$,x],Times[d$$,y]]},{x,-4,4},{y,-4,4}]],Set[linePlot,Plot[{Times[
+Part[vec1,2],Times[x,Power[{Plus[Part[vec1,1],Power[10,-10]]},-1]]],Times[Part[vec2,
+2],Times[x,Power[{Plus[Part[vec2,1],Power[10,-10]]},-1]]]},{x,-5,5},PlotRange -> {-5,5},
+PlotStyle -> Directive[Red,Opacity[0.8]],PlotLabel -> system]],Show[strPlot,linePlot,
+PlotLabel -> system]]],RuleDelayed["Specifications",{{{a$$,0},-3,3},{{b$$,-2},-3,3},{{c$$,1},-3,3},{{d$$,0},-3,3}}],
+RuleDelayed["Options",{}],RuleDelayed["DefaultOptions",{}]],SingleEvaluation -> True],
+RuleDelayed[DynamicModuleValues,{}],RuleDelayed[Deinitialization,None],RuleDelayed[
+UntrackedVariables,{Typeset`size$$}],SynchronousInitialization -> True,RuleDelayed[
+UnsavedVariables,{Typeset`initDone$$}],RuleDelayed[UndoTrackedVariables,{Typeset`show$$,Typeset`bookmarkMode$$}],
+ExpressionUUID -> "0204df91-9441-4466-a8c5-ccd34a4b6042"],"Manipulate",Deployed -> True,
+StripOnInput -> False],Manipulate`InterpretManipulate[1]],StandardForm],"Output",
+ExpressionUUID -> "4a0451ce-735a-4775-b735-b510c0b70b42",CellLabel -> "Out[1]= "]},
+Open],ExpressionUUID -> "01d9e851-7887-47ef-826d-ea12fc1f8078"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "12.1 for Wolfram Cloud 1.54.2 (March 10, 2020)"]

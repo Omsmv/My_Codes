@@ -1,0 +1,143 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4130,        133]
+NotebookOptionsPosition[      3596,        110]
+NotebookOutlinePosition[      3939,        125]
+CellTagsIndexPosition[      3896,        122]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "\"\<Name: Om Vaknalli\nRoll No. 18376\nDate: 22nd November 2020\n\n\
+Assignment: Write a program in MATLAB or python to solve the 1-D steady-state \
+flow in a confined aquifer using Laplace equation with boundary conditions.\>\
+\"", ";"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.815055389130348*^9, 3.8150553891393847`*^9}, {
+  3.815055486516778*^9, 3.8150556353448706`*^9}}],
+
+Cell[BoxData["\"\<Laplace equation: \[Del]^2[h(x, y, z)] = 0 \n\nIn \
+1-Dimension, it reduces to: d^2[h(x)]/dx^2 = 0\n\nBoundary Conditions:\n\n1.) \
+At x = 0, h(x) = h1 ----- h(0) = h1\n2.) At x = L, h(x) = h2 ----- h(L) = h2\n\
+\nSolving the differential equation with boundary conditions:\>\""], "Input",
+ CellChangeTimes->{{3.8150559177081614`*^9, 3.8150559547217007`*^9}, {
+  3.815055985074638*^9, 3.815056379922283*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"h", "''"}], "[", "x", "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"h", "[", "0", "]"}], "\[Equal]", "h1"}], ",", 
+     RowBox[{
+      RowBox[{"h", "[", "L", "]"}], "\[Equal]", "h2"}]}], "}"}], ",", 
+   RowBox[{"h", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8150556594350014`*^9, 3.815055681999667*^9}, {
+   3.8150557193805513`*^9, 3.815055774775323*^9}, 3.8150558821380377`*^9, {
+   3.815056447035244*^9, 3.815056454959824*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"h", "[", "x", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"h1", " ", "L"}], "-", 
+      RowBox[{"h1", " ", "x"}], "+", 
+      RowBox[{"h2", " ", "x"}]}], "L"]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8150557599360447`*^9, 3.815055776277734*^9}, 
+   3.8150558832360826`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\"\<Hence, the simplified solution is : h(x) = h1 + ((h2 - h1) * \
+x)/L.\n\nNow, according to Darcy's law:\>\"", ";"}]], "Input",
+ CellChangeTimes->{{3.8150563989129486`*^9, 3.8150564034012876`*^9}, {
+  3.8150564700893507`*^9, 3.8150568217404895`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"q", " ", "=", 
+     RowBox[{
+      RowBox[{"-", "k"}], " ", "*", " ", 
+      RowBox[{
+       RowBox[{"h", "'"}], "[", "x", "]"}]}]}], ";"}], "\n", "\n", 
+   RowBox[{"\"\<But:\>\"", ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"h", "'"}], "[", "x", "]"}], "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"h2", " ", "-", " ", "h1"}], ")"}], "/", "L"}]}], ";"}], "\n", 
+   "\n", 
+   RowBox[{"\"\<Hence, q =\>\"", ";", "q"}]}]}]], "Input",
+ CellChangeTimes->{{3.8150568351714115`*^9, 3.815056961208123*^9}, {
+  3.8150569977331643`*^9, 3.8150571261045904`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "h1"}], "+", "h2"}], ")"}], " ", "k"}], "L"]}]], "Output",
+ CellChangeTimes->{3.8150571267161865`*^9}]
+}, Open  ]]
+},
+WindowSize->{759, 553},
+WindowMargins->{{Automatic, 252}, {29, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 414, 8, 145, "Input"],
+Cell[975, 30, 426, 5, 202, "Input"],
+Cell[CellGroupData[{
+Cell[1426, 39, 595, 15, 30, "Input"],
+Cell[2024, 56, 372, 11, 47, "Output"]
+}, Open  ]],
+Cell[2411, 70, 276, 4, 69, "Input"],
+Cell[CellGroupData[{
+Cell[2712, 78, 656, 20, 145, "Input"],
+Cell[3371, 100, 209, 7, 80, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

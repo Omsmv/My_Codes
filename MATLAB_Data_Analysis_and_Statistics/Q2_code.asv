@@ -1,0 +1,7 @@
+"Roll No. 18376"
+
+data1 = importdata("Q2_data.mat")
+
+eig = eig (data)
+
+coeff = pcacov(data1)

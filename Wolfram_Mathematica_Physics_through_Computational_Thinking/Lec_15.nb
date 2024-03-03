@@ -1,0 +1,107 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{"ti","=","0"}],";"}],"\n",RowBox[{RowBox[
+{"tf","=","1"}],";"}],"\n",RowBox[{RowBox[{"nMax","=","100"}],";"}],"\n",RowBox[{RowBox[
+{"h","=",RowBox[{RowBox[{RowBox[{"(",RowBox[{"tf","-","ti"}],")"}],"/","nMax"}],"//","N"}]}],";"}],"\n",RowBox[
+{RowBox[{"datalist","=",RowBox[{"{",RowBox[{"{",RowBox[{"ti",",","1"}],"}"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{RowBox[{"f","[",RowBox[{"x_",",","t_"}],"]"}],"=",RowBox[{RowBox[
+{"-","2.0"}]," ","x"}]}],";"}],"\n"}]}],"Input",ExpressionUUID -> "da10e854-1644-4b45-8bf4-a73d9211400c",
+CellLabel -> "In[64]:= "],Cell[
+BoxData[RowBox[{"For","[","\n",RowBox[{RowBox[{"ctr","=","1"}],",",RowBox[
+{"ctr","\[LessEqual]","nMax"}],",",RowBox[{"ctr","++"}],",","\n",RowBox[{RowBox[{"tPrev","=",RowBox[
+{"ti","+",RowBox[{"h",RowBox[{"(",RowBox[{"ctr","-","1"}],")"}]}]}]}],";","\n",RowBox[
+{"xPrev","=",RowBox[{"datalist","[",RowBox[{"[",RowBox[{RowBox[{"-","1"}],",","2"}],"]"}],"]"}]}],";","\n",RowBox[
+{"tNext","=",RowBox[{"tPrev","+","h"}]}],";","\n",RowBox[{"xNext","=",RowBox[{"xPrev","+",RowBox[
+{"h"," ",RowBox[{"f","[",RowBox[{"xPrev",",","tPrev"}],"]"}]}]}]}],";","\n",RowBox[
+{"AppendTo","[",RowBox[{"datalist",",",RowBox[{"{",RowBox[{"tNext",",","xNext"}],"}"}]}],"]"}],";"}]}],"\n","]"}]],
+"Input",ExpressionUUID -> "19652485-eaf7-4f5d-8ee6-7a9f64f224a4"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{"datalist","\n",RowBox[{RowBox[{"plot1","=",RowBox[{"ListPlot","[","datalist","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"plot2","=",RowBox[{"Plot","[",RowBox[{RowBox[{"Exp","[",RowBox[{RowBox[
+{"-","2"}]," ","t"}],"]"}],",",RowBox[{"{",RowBox[{"t",",","0",",","1"}],"}"}]}],"]"}]}],";"}],"\n",RowBox[
+{"Show","[",RowBox[{"plot1",",","plot2"}],"]"}]}],"Input",ExpressionUUID -> "0332c363-5c42-4c0b-8065-33c434956ebc",
+CellLabel -> "In[71]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0",",","1"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.01`",",","0.98`"}],"}"}],",",RowBox[{"{",RowBox[{"0.02`",",","0.9604`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.03`",",","0.941192`"}],"}"}],",",RowBox[{"{",RowBox[{"0.04`",",","0.92236816`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.05`",",","0.9039207968`"}],"}"}],",",RowBox[{"{",RowBox[{"0.060000000000000005`",",","0.885842380864`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.06999999999999999`",",","0.86812553324672`"}],"}"}],",",RowBox[{"{",RowBox[
+{"0.08`",",","0.8507630225817856`"}],"}"}],",",RowBox[{"{",RowBox[{"0.09`",",","0.8337477621301499`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.09999999999999999`",",","0.8170728068875469`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.11`",",","0.800731350749796`"}],"}"}],",",RowBox[{"{",RowBox[{"0.12`",",","0.7847167237348001`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.13`",",","0.769022389260104`"}],"}"}],",",RowBox[{"{",RowBox[{"0.14`",",","0.7536419414749019`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.15000000000000002`",",","0.7385691026454039`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.16`",",","0.7237977205924958`"}],"}"}],",",RowBox[{"{",RowBox[{"0.17`",",","0.7093217661806459`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.18000000000000002`",",","0.6951353308570329`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.19`",",","0.6812326242398923`"}],"}"}],",",RowBox[{"{",RowBox[{"0.2`",",","0.6676079717550945`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.21000000000000002`",",","0.6542558123199925`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.22`",",","0.6411706960735927`"}],"}"}],",",RowBox[{"{",RowBox[{"0.23`",",","0.6283472821521208`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.24000000000000002`",",","0.6157803365090784`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.25`",",","0.6034647297788968`"}],"}"}],",",RowBox[{"{",RowBox[{"0.26`",",","0.5913954351833188`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.27`",",","0.5795675264796525`"}],"}"}],",",RowBox[{"{",RowBox[{"0.28`",",","0.5679761759500594`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.29000000000000004`",",","0.5566166524310583`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.3`",",","0.5454843193824371`"}],"}"}],",",RowBox[{"{",RowBox[{"0.31`",",","0.5345746329947884`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.32`",",","0.5238831403348926`"}],"}"}],",",RowBox[{"{",RowBox[{"0.33`",",","0.5134054775281948`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.34`",",","0.5031373679776309`"}],"}"}],",",RowBox[{"{",RowBox[{"0.35000000000000003`",",","0.4930746206180783`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.36000000000000004`",",","0.4832131282057167`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.37`",",","0.47354886564160237`"}],"}"}],",",RowBox[{"{",RowBox[{"0.38`",",","0.46407788832877034`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.39`",",","0.45479633056219493`"}],"}"}],",",RowBox[{"{",RowBox[{"0.4`",",","0.445700403950951`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.41000000000000003`",",","0.43678639587193197`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.42000000000000004`",",","0.4280506679544933`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.43`",",","0.41948965459540344`"}],"}"}],",",RowBox[{"{",RowBox[{"0.44`",",","0.41109986150349537`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.45`",",","0.4028778642734255`"}],"}"}],",",RowBox[{"{",RowBox[{"0.46`",",","0.39482030698795695`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.47000000000000003`",",","0.38692390084819783`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.48000000000000004`",",","0.37918542283123385`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.49`",",","0.3716017143746092`"}],"}"}],",",RowBox[{"{",RowBox[{"0.5`",",","0.36416968008711703`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.51`",",","0.3568862864853747`"}],"}"}],",",RowBox[{"{",RowBox[{"0.52`",",","0.3497485607556672`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.53`",",","0.34275358954055385`"}],"}"}],",",RowBox[{"{",RowBox[{"0.54`",",","0.3358985177497428`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.55`",",","0.32918054739474795`"}],"}"}],",",RowBox[{"{",RowBox[{"0.56`",",","0.322596936446853`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.5700000000000001`",",","0.31614499771791593`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.5800000000000001`",",","0.3098220977635576`"}],"}"}],",",RowBox[{"{",RowBox[
+{"0.59`",",","0.3036256558082865`"}],"}"}],",",RowBox[{"{",RowBox[{"0.6`",",","0.29755314269212074`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.61`",",","0.29160207983827835`"}],"}"}],",",RowBox[{"{",RowBox[{"0.62`",",","0.28577003824151276`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.63`",",","0.2800546374766825`"}],"}"}],",",RowBox[{"{",RowBox[{"0.64`",",","0.2744535447271489`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.65`",",","0.2689644738326059`"}],"}"}],",",RowBox[{"{",RowBox[{"0.66`",",","0.2635851843559538`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.67`",",","0.2583134806688347`"}],"}"}],",",RowBox[{"{",RowBox[{"0.68`",",","0.253147211055458`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.6900000000000001`",",","0.24808426683434884`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.7000000000000001`",",","0.24312258149766186`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.7100000000000001`",",","0.23826012986770861`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.72`",",","0.23349492727035445`"}],"}"}],",",RowBox[{"{",RowBox[{"0.73`",",","0.22882502872494737`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.74`",",","0.2242485281504484`"}],"}"}],",",RowBox[{"{",RowBox[{"0.75`",",","0.21976355758743943`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.76`",",","0.21536828643569064`"}],"}"}],",",RowBox[{"{",RowBox[{"0.77`",",","0.21106092070697682`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.78`",",","0.2068397022928373`"}],"}"}],",",RowBox[{"{",RowBox[{"0.79`",",","0.20270290824698056`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.8`",",","0.19864885008204095`"}],"}"}],",",RowBox[{"{",RowBox[{"0.81`",",","0.19467587308040013`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.8200000000000001`",",","0.19078235561879212`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.8300000000000001`",",","0.18696670850641628`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.8400000000000001`",",","0.18322737433628794`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.85`",",","0.17956282684956218`"}],"}"}],",",RowBox[{"{",RowBox[{"0.86`",",","0.17597157031257094`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.87`",",","0.17245213890631952`"}],"}"}],",",RowBox[{"{",RowBox[{"0.88`",",","0.16900309612819314`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.89`",",","0.16562303420562927`"}],"}"}],",",RowBox[{"{",RowBox[{"0.9`",",","0.16231057352151668`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.91`",",","0.15906436205108634`"}],"}"}],",",RowBox[{"{",RowBox[{"0.92`",",","0.1558830748100646`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.93`",",","0.1527654133138633`"}],"}"}],",",RowBox[{"{",RowBox[{"0.9400000000000001`",",","0.14971010504758606`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.9500000000000001`",",","0.14671590294663434`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.9600000000000001`",",","0.14378158488770165`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.97`",",","0.1409059531899476`"}],"}"}],",",RowBox[{"{",RowBox[{"0.98`",",","0.13808783412614867`"}],"}"}],",",RowBox[
+{"{",RowBox[{"0.99`",",","0.13532607744362568`"}],"}"}],",",RowBox[{"{",RowBox[{"1.`",",","0.13261955589475316`"}],"}"}]}],"}"}],
+StandardForm],"Output",ExpressionUUID -> "a10c587a-761f-4c8e-8177-c6f83f917cce",CellLabel -> "Out[71]= "],Cell[
+BoxData[
+GraphicsBox[{{{},{{{Directive[PointSize[0.009166666666666668],RGBColor[0.368417,0.506779,
+0.709798],AbsoluteThickness[1.6]],PointBox[CompressedData["1:eJxVlQtMU2cUx5kx2QR16hibQxmPLBvDMQTGxmD8FTEKbKA4iWCdWcMrEBBkTgZL2BgyGG9B5ZHgC3D4wAcPITqFtrQ8WqD0aanQFy20BZwMom5xo/VsyU5yc/Pde79zzv//OzefC/NIVPwKGxub+OXLcv9/PEKOfesudXY+GOWsxfcY87SuxvY8Da/mzhy6nE6Y9nY14MnHSdeDnObofSO+DA8OsM2fRV2tJVrQzimNMJnN6LZ+34qRNwxOYwfMWF4sP7mJ8B6293Weifa3Y3aP+HCmvwm2sovpn9nehtdg2sCrrUZY09V2Q7Tmpclj7xjhbm3sLiZ2FseeOTtD/dxDnIMrEjbNoHF5t+xiD946miUT10/DbK3XizZjertk8zR8fSzBRlN055WDFwxUnwNJ80FpjLsB7GXV5aw+RPPyytm39LCz9sODV6JtZkmQHlHWgv2Q/xTM+JU/RXoHcOPUpTi7Q1PQZFsSDuJSQKOmZV5H/fLRFhKTlJWvQ4alvXQBCpZSWCmOOvJnGDUZiqWsdi1ecBiF+2vSHacitaRnFA2dF506zRrsVlsKCOHQ9aO3sFhD+oQYrqs6rNyiQYUFW/kY0vxE3YIRNaxyfUT4PeLlwvpv1LDKkYmQkXM/ONBRTfrFuLRtf1UzW4W3Le04SZAT8jhKmKoiPyQo/aG+qG2jCokJlpBid3ueorBskvyRQbq6pXfJPAFLNvtWGfQh9/VnIybILznYgrB7mW0PsWRJtyhH0v2C9UzHh+TfAzxzufVXbIESQdYBUGBcmzAb8cc4+anAo8in5zzjx2Ft78Q4quWTria5gvxVonK129CxSAUEfEsosbdEEtjT/4D8fohIaVXc3ZAHeN3a4AQus+yOM9hy8n8CmQXF8ydD5DT3kwh6s6Ysql9GPFSwH/3lQFmEjPSoIN3sV+0vkxIfFbq2Vg7sYkpJnwqhmck9V+clxEsNz0bnXEauhPSqkVLCDA1fLyF+atxZu9iQ2iQm/Rp45+d+2hUgJp4aPA/6ap2zWIQX6TTg2ud8UZcmIr5a8IUe0ZvsROSPFhXfOvTVt4wRby12ujomrw0bI790cCzdEZpsFhJ/HYYXb9c2VQjJPx2aE7o5nX5Cmocp5Pudj6ueGCU/p/DhlakdHxWO0nxMofGCG6PCZ5T81WP7vtjL/r0jNC96ZPH9X2l0GiG/9ajOUYojcofpfzfgSoBvsrtWQP4boDqXftwtTEDzZMAHRWF/b2nnE49pdCYeiPZz4ROPaSxuTnHxqhwiHstrv4V9diuHiMc02mLSPLu/GyQeMyjpVwZ6PB4gHjMo4gTt35c6QDxm4Hx142k3Uz/xMEJwbWV8WUo/8TCCYwhMLZjj0Xwa0Ty8reF5Jo94mLCq8+j7xj+5xMOEwGjWicACLvEwodTjUNzMBi7xMGOpOL5bd76PeJgh23Ojw9Wnj3iYsW6hkHuGyyEes8h4klP9CYNDPGax9eS7K54tsInHLDo+3+AhLGUTjzlU3fyZ2ebOJh5zYP6W7X2axyIec8i3S4s9ksgiHvNoqvt62HcV679zYM8abofyai/xmMf3YceSD0X14t9zo4Z54/i1pz34B9ijKiw="]]}},{{Directive[
+PointSize[0.009166666666666668],RGBColor[0.368417,0.506779,0.709798],AbsoluteThickness[
+1.6]]},{}},{{Directive[PointSize[0.009166666666666668],RGBColor[0.368417,0.506779,
+0.709798],AbsoluteThickness[1.6]]},{}}},{{},{}}},{{{{},{},TagBox[{Directive[Opacity[
+1.0],RGBColor[0.368417,0.506779,0.709798],AbsoluteThickness[1.6]],LineBox[CompressedData[
+"1:eJwV1P8303sAx/GR8q2GFGe6Iy6RFKdcXaledXMjUddQOglXqHT7otxbnLpxr3UlZaecUr5U1l2krHzpklU+syRfx5ZJDMPCNu92D4l74tYPz/P8Dx62UcdYMbo0Gi3gS1/vFzPcVjMSstEDFqOzswR6W6yO9zLcUWVmp5maJlhzKzu3jOENrQn96fgEwfZmWWkeIxib2vQfq1UEu6Mnn11hRMPKb76pUkbQ4/rXlkuMBDSeqPxthk9we/HO8+mMVKxanGv0MpIgxaDM8QIjC2rHvDMFojGE7rnD/6C9i+Q1yqT4MxoYz6aE+VjzcYwtTdq7Sw2HwLHh2ovlyE+vOuS8WYVTLZ7IHq+Cgdfvx+OXjsKy3Eyuo/MCnv+m9tQxR/BEsaWpdb0Q54jTQ4HpMIRxeUv2qEXw76kUXzZ/j4llG0weHnkFN9bVgHo3JXSnik2XODRAVRDGLPcegsds5JOgkiaIpb9yXOIH0ZTq3lLn3IqAxrHJ+qIB2HBUU0VjYkQzzjfrdymgmuyVv3Frh+HOq/oqGwXujlY30C9L8CB9j3hreD/ozHtkcFAKf3bpPKPCPmQcqoi9bd8BHVr/3Ha9PnzcVDx48JwMdWqeSWmFHAmrReUWtZ1Y7s6us2H3oLdEdLHNtguK2CVHD/h24784ac7ypHd4Ps0yDLd+hxWb9Wdiq7vRnrbMOda8Cz4FtgceW8rxowGJu/C5E6eYEXb9Yb1YezXn5mW9TrioQ4xlAX0Y59Yt6mPIYG7ywUA03YcIy+yVsQ4d0HuRw/82tx9ysdb9Z783OOxe/dZwuwJJK1hOGbFSFG+Luv38owK9XmOu9hwJJlRWpsprA6APRGoZ4nZUBPnMyfIeRF8IbZWTQTvO+bJvlSsHceQKPVE3pA22PX6dXPYQbkzydO0fiLFubWoWY7USzcsya4I+tSLMunVKR6LECGtTl/GzFkw0XFIcT3kPwSKXicmEZmTrhSew7IchDbpVOr2jCebyigJd0TCKr5we6vdsxNyzKcGe8SMIiTR18mU0gFYUzlcsHIX3P8G7Ki1e48RN/qWFwlEMTdnFtxrW49mKNAOzoyqomAFD1PxXMPM74fIHXQ2LyHwPS+c6dK8USxIFanBrGjvsN77Eo3zYD4ZrwJknu/k0ToR9fA8z5owGGTXVgSe5tUhm30npvj+GbRcjxiUSIR4OM3Po/gTrL2g5UoYQaXnsSPkOglcBMRyehRDRLI1DSSCB70SHdaK5EN8IBI8CdhNYnd45bLNAiPTMvXUZUQT+pjLnBJoQBz1uaI0SCYwW7wtd+56CXeoiX30eQUIt/Z5jBYWZ788skBUSzDBHQoxLKbzVDLTzigmWLuBxSAkFzu6yfVsfE7yOiimqKqQw68w6yRYQNH7wiwnOpdDdlpk/R0LA6/XRcv+kUHl+cr/kDcFPrmIWJ5lCllfEcm4ngYembOPZsxS2/72q/Ac5gWOyS0XoKQpPTze/ThkhyEtbZ2VxmMK1ld9lBqoJNpR+bJx3kEK8IjfYlhBIAv31P0VTcPL/pbdmnOC6z36r7nAKejrSu5xJAgFrXNuyl0JfhVdc5BeHXm54zhKGUhDEcV3dPhPUawrXPwmhcN3GeOKrW5b+ufz7LAr/A8neb6s="]]},
+Function[Annotation[Slot[1],"Charting`Private`Tag$24347#1"]]]}},{}}},DisplayFunction -> Identity,
+DisplayFunction -> Identity,AspectRatio -> NCache[Power[GoldenRatio,-1],0.6180339887498948],
+Axes -> {True,True},AxesLabel -> {None,None},AxesOrigin -> {0,0},RuleDelayed[DisplayFunction,
+Identity],Frame -> {{False,False},{False,False}},FrameLabel -> {{None,None},{None,None}},
+FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},
+GridLinesStyle -> Directive[GrayLevel[0.5,0.4]],Method -> CompressedData["1:eJzlkDELwjAQhWNxcHMQ3P0tFUFQLG1xj+YKhzEXkstQf71JhUiluDm5HJeX7707bnOhuiuEEH4eywE9v1910NCsYnOyjHd8QKWJj9LdwPkBaF2AD3wdm5LIKTSSwbdEOrnJ+K9TlrHZorda9rtgrsnQzRKxiCUr44T0PwFlZa/AMHL/UpKtifvjYMtJlXQ8AWAO/9mEYkTlW5dkEdRZ6gD/dIknqvCFRg=="],
+PlotRange -> {{0,1.0},{0,1.0}},PlotRangeClipping -> True,PlotRangePadding -> {{Scaled[
+0.02],Scaled[0.02]},{Scaled[0.02],Scaled[0.05]}},Ticks -> {Automatic,Automatic},ExpressionUUID -> "22fb1245-b5e6-4595-8e21-79932568d382"],
+StandardForm],"Output",ExpressionUUID -> "f29a08bf-0aad-4ecc-b3d4-5aee70500cd5",CellLabel -> "Out[74]= "]},
+Open],ExpressionUUID -> "d734f868-8d98-427a-85dd-3c8f0bc4a07b"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "a2058d68-b8a5-404f-a17e-5ba41bb05138",CellLabel -> "In[48]:= "]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "12. for Wolfram Cloud 1.54.0.1 (January 17, 2020)"]
